@@ -1,0 +1,31 @@
+[project]
+name = "cancerscreening"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "JRHeurung", email = "josh.heurung@gmail.com" }
+]
+requires-python = ">=3.15"
+dependencies = [
+    "duckdb>=2.0.1",
+    "geopandas>=1.2.0",
+    "pandas>=3.1.1",
+    "plotly>=7.1.0",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+cancerscreening = "cancerscreening:main"
+
+[build-system]
+requires = ["uv_build>=0.13.9,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "jupyter>=1.1.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
